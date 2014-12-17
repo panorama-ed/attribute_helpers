@@ -60,3 +60,7 @@ backend (or none!). **You can extend it in pure Ruby classes just fine!**
 **Make sure your changes have appropriate tests and conform to the
 Rubocop style specified.** We use
 [overcommit](https://github.com/causes/overcommit) to enforce good code.
+
+## License
+
+AttributeHelpers is released under the [MIT License](http://opensource.org/licenses/MIT).
