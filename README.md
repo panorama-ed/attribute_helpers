@@ -1,3 +1,9 @@
+[![Code Climate](https://codeclimate.com/github/panorama-ed/attribute_helpers/badges/gpa.svg)](https://codeclimate.com/github/panorama-ed/attribute_helpers)
+
+[![Test Coverage](https://codeclimate.com/github/panorama-ed/attribute_helpers/badges/coverage.svg)](https://codeclimate.com/github/panorama-ed/attribute_helpers)
+
+[![Build Status](https://travis-ci.org/panorama-ed/attribute_helpers.svg)](https://travis-ci.org/panorama-ed/attribute_helpers)
+
 # AttributeHelpers
 
 Provides helper functionality for ruby classes that store various
@@ -57,8 +63,8 @@ backend (or none!). **You can extend it in pure Ruby classes just fine!**
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
 
-**Make sure your changes have appropriate tests and conform to the
-Rubocop style specified.** We use
+**Make sure your changes have appropriate tests (`bundle exec rspec`)
+and conform to the Rubocop style specified.** We use
 [overcommit](https://github.com/causes/overcommit) to enforce good code.
 
 ## License
