@@ -35,7 +35,7 @@ serialization.
 
 ```ruby
 class Vehicle < ActiveRecord::Base
-  extend AttributeHelpers
+  include AttributeHelpers
 
   attr_class :manufacturer
   attr_symbol :status
