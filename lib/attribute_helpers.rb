@@ -1,8 +1,15 @@
 require "attribute_helpers/version"
 
+# Provides helper functionality for ruby classes that store various
+# database-unfriendly types as instance variables. It automatically serializes
+# and deserializes things like classes and symbols to interact easily with both
+# the database and your application code.
+
 module AttributeHelpers
-  # Makes an attribute a symbol, providing setters and getters for the
-  # attr that will translate back and forth as needed
+  # Marks attributes as storing symbol values, providing setters and getters for
+  # the attributes that will allow the application to use them as a symbols but
+  # store them internally as strings.
+  # @param attrs [*Symbol] a list of the names of attributes that store symbols
   def attr_symbol(*attrs)
     attrs.each do |attr|
       # Store the original methods for use in the overwritten ones.
@@ -22,8 +29,10 @@ module AttributeHelpers
     end
   end
 
-  # Makes an attribute a class, providing setters and getters for the
-  # attr that will translate back and forth as needed
+  # Marks attributes as storing class values, providing setters and getters for
+  # the attributes that will allow the application to use them as a classes but
+  # store them internally as strings.
+  # @param attrs [*Symbol] a list of the names of attributes that store classes
   def attr_class(*attrs)
     attrs.each do |attr|
       # Store the original methods for use in the overwritten ones.
