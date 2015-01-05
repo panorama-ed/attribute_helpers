@@ -1,4 +1,4 @@
-[![Code Climate](https://codeclimate.com/github/panorama-ed/attribute_helpers/badges/gpa.svg)](https://codeclimate.com/github/panorama-ed/attribute_helpers) [![Test Coverage](https://codeclimate.com/github/panorama-ed/attribute_helpers/badges/coverage.svg)](https://codeclimate.com/github/panorama-ed/attribute_helpers) [![Build Status](https://travis-ci.org/panorama-ed/attribute_helpers.svg)](https://travis-ci.org/panorama-ed/attribute_helpers)
+[![Code Climate](https://codeclimate.com/github/panorama-ed/attribute_helpers/badges/gpa.svg)](https://codeclimate.com/github/panorama-ed/attribute_helpers) [![Test Coverage](https://codeclimate.com/github/panorama-ed/attribute_helpers/badges/coverage.svg)](https://codeclimate.com/github/panorama-ed/attribute_helpers) [![Build Status](https://travis-ci.org/panorama-ed/attribute_helpers.svg)](https://travis-ci.org/panorama-ed/attribute_helpers) [![Inline docs](http://inch-ci.org/github/panorama-ed/attribute_helpers.png)](http://inch-ci.org/github/panorama-ed/attribute_helpers)
 
 # AttributeHelpers
 
