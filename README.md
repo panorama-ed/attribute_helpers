@@ -1,4 +1,4 @@
-[![Code Climate](https://codeclimate.com/github/panorama-ed/attribute_helpers/badges/gpa.svg)](https://codeclimate.com/github/panorama-ed/attribute_helpers) [![Test Coverage](https://codeclimate.com/github/panorama-ed/attribute_helpers/badges/coverage.svg)](https://codeclimate.com/github/panorama-ed/attribute_helpers) [![Build Status](https://travis-ci.org/panorama-ed/attribute_helpers.svg)](https://travis-ci.org/panorama-ed/attribute_helpers) [![Inline docs](http://inch-ci.org/github/panorama-ed/attribute_helpers.png)](http://inch-ci.org/github/panorama-ed/attribute_helpers)
+[![Code Climate](https://codeclimate.com/github/panorama-ed/attribute_helpers/badges/gpa.svg)](https://codeclimate.com/github/panorama-ed/attribute_helpers) [![Test Coverage](https://codeclimate.com/github/panorama-ed/attribute_helpers/badges/coverage.svg)](https://codeclimate.com/github/panorama-ed/attribute_helpers) [![Build Status](https://travis-ci.org/panorama-ed/attribute_helpers.svg)](https://travis-ci.org/panorama-ed/attribute_helpers) [![Inline docs](http://inch-ci.org/github/panorama-ed/attribute_helpers.png)](http://inch-ci.org/github/panorama-ed/attribute_helpers) [![Gem Version](https://badge.fury.io/rb/attribute_helpers.svg)](http://badge.fury.io/rb/attribute_helpers)
 
 # AttributeHelpers
 
@@ -30,6 +30,8 @@ called will wrap the related instance method to allow for better database
 serialization.
 
 ```ruby
+require "attribute_helpers"
+
 class Vehicle < ActiveRecord::Base
   extend AttributeHelpers
 
