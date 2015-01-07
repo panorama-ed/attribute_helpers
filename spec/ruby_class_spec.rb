@@ -1,17 +1,19 @@
 require "spec_helper"
 
-RSpec.describe AttributeHelpers do
+RSpec.context "in a pure Ruby class" do
+  class RubyTestClass
+    prepend AttributeHelpers
+
+    attr_accessor :symbol_attr
+    attr_accessor :class_attr
+
+    attr_symbol :symbol_attr
+    attr_class :class_attr
+  end
+
+  let(:test_obj) { RubyTestClass.new }
+
   describe ".attr_symbol" do
-    class AttributeHelperTestClass
-      extend AttributeHelpers
-
-      attr_accessor :symbol_attr
-
-      attr_symbol :symbol_attr
-    end
-
-    let(:test_obj) { AttributeHelperTestClass.new }
-
     describe "getter" do
       it "translates string to symbol" do
         # Give it an intial value to be read.
@@ -47,22 +49,23 @@ RSpec.describe AttributeHelpers do
   end
 
   describe ".attr_class" do
-    class AttributeHelperTestClass
-      extend AttributeHelpers
-
-      attr_accessor :class_attr
-
-      attr_class :class_attr
-    end
-
-    let(:test_obj) { AttributeHelperTestClass.new }
-
     describe "getter" do
-      it "translates string to class" do
-        # Give it an intial value to be read.
-        test_obj.instance_variable_set(:@class_attr, "Object")
+      context "when string represents a real class" do
+        it "translates string to class" do
+          # Give it an intial value to be read.
+          test_obj.instance_variable_set(:@class_attr, "Object")
 
-        expect(test_obj.class_attr).to eq Object
+          expect(test_obj.class_attr).to eq Object
+        end
+      end
+
+      context "when string does not represent a real class" do
+        it "raises an error" do
+          # Give it an intial value to be read.
+          test_obj.instance_variable_set(:@class_attr, "BogusClass")
+
+          expect { test_obj.class_attr }.to raise_error(NameError)
+        end
       end
 
       it "reads nil correctly" do

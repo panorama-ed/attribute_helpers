@@ -33,7 +33,7 @@ serialization.
 require "attribute_helpers"
 
 class Vehicle < ActiveRecord::Base
-  extend AttributeHelpers
+  prepend AttributeHelpers
 
   attr_class :manufacturer
   attr_symbol :status
@@ -51,7 +51,8 @@ car.status # :parked (the symbol) rather than "parked" (the string)
 
 Note: while this gem was written to help with ActiveRecord
 objects, it has **no dependencies** and works great with any database
-backend (or none!). **You can extend it in pure Ruby classes just fine!**
+backend (or none!). **You can prepend it into pure Ruby classes just
+fine!**
 
 ## Contributing
 
