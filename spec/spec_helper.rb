@@ -1,6 +1,11 @@
 require "codeclimate-test-reporter"
 CodeClimate::TestReporter.start
 
+# Connect to an in-memory database for ActiveRecord tests.
+require "temping"
+ActiveRecord::Base.
+  establish_connection(adapter: "sqlite3", database: ":memory:")
+
 require "attribute_helpers"
 
 RSpec.configure do |config|
