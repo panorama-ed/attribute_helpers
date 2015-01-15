@@ -22,7 +22,9 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.7"
   spec.add_development_dependency "codeclimate-test-reporter", "~> 0.4"
+  spec.add_development_dependency "overcommit", "~> 0.21"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.1"
+  spec.add_development_dependency "rubocop", "~> 0.28"
   spec.add_development_dependency "temping", "~> 3.2"
 end
