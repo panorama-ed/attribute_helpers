@@ -3,14 +3,28 @@ require "spec_helper"
 RSpec.context "in an ActiveRecord class" do
   Temping.create :active_record_test_class do
     with_columns do |t|
+      t.integer :other_symbol_attr
+      t.integer :other_class_attr
       t.string :symbol_attr
       t.string :class_attr
     end
 
-    prepend AttributeHelpers
+    extend AttributeHelpers
 
     attr_symbol :symbol_attr
     attr_class :class_attr
+  end
+
+  Temping.create :other_active_record_test_class do
+    with_columns do |t|
+      t.string :other_symbol_attr
+      t.string :other_class_attr
+    end
+
+    extend AttributeHelpers
+
+    attr_symbol :other_symbol_attr
+    attr_class :other_class_attr
   end
 
   let(:test_obj) { ActiveRecordTestClass.new }
@@ -46,6 +60,13 @@ RSpec.context "in an ActiveRecord class" do
 
         test_obj.symbol_attr = nil
         expect(test_obj[:symbol_attr]).to be_nil
+      end
+    end
+
+    context "with attributes that overlap with another class" do
+      it "does not overwrite other attributes" do
+        test_obj.other_symbol_attr = 12345
+        expect(test_obj.other_symbol_attr).to eq 12345
       end
     end
   end
@@ -92,6 +113,13 @@ RSpec.context "in an ActiveRecord class" do
 
         test_obj.class_attr = nil
         expect(test_obj[:class_attr]).to be_nil
+      end
+    end
+
+    context "with attributes that overlap with another class" do
+      it "does not overwrite other attributes" do
+        test_obj.other_class_attr = 12345
+        expect(test_obj.other_class_attr).to eq 12345
       end
     end
   end

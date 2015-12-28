@@ -27,4 +27,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rspec", "~> 3.1"
   spec.add_development_dependency "rubocop", "~> 0.28"
   spec.add_development_dependency "temping", "~> 3.2"
+  spec.add_development_dependency "sqlite3", "~> 1.3"
 end
