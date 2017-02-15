@@ -33,7 +33,7 @@ serialization.
 require "attribute_helpers"
 
 class Vehicle < ActiveRecord::Base
-  extend AttributeHelpers
+  include AttributeHelpers
 
   attr_class :manufacturer
   attr_symbol :status
