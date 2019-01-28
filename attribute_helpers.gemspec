@@ -21,7 +21,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", "~> 2.0"
-  spec.add_development_dependency "codeclimate-test-reporter", "~> 0.4"
+  spec.add_development_dependency "codeclimate-test-reporter", "~> 1.0"
   spec.add_development_dependency "overcommit", "~> 0.21"
   spec.add_development_dependency "rake", "~> 12.3"
   spec.add_development_dependency "rspec", "~> 3.1"
