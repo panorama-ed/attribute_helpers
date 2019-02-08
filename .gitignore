@@ -14,3 +14,4 @@
 mkmf.log
 /.DS_Store
 *.gem
+.rubocop-https---raw-githubusercontent-com-panorama-ed-code-conventions-master-rubocop-yml

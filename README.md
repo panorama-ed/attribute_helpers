@@ -1,4 +1,7 @@
-[![Code Climate](https://codeclimate.com/github/panorama-ed/attribute_helpers/badges/gpa.svg)](https://codeclimate.com/github/panorama-ed/attribute_helpers) [![Test Coverage](https://codeclimate.com/github/panorama-ed/attribute_helpers/badges/coverage.svg)](https://codeclimate.com/github/panorama-ed/attribute_helpers) [![Build Status](https://travis-ci.org/panorama-ed/attribute_helpers.svg)](https://travis-ci.org/panorama-ed/attribute_helpers) [![Inline docs](http://inch-ci.org/github/panorama-ed/attribute_helpers.png)](http://inch-ci.org/github/panorama-ed/attribute_helpers) [![Gem Version](https://badge.fury.io/rb/attribute_helpers.svg)](http://badge.fury.io/rb/attribute_helpers)
+[![Code Coverage](https://codecov.io/gh/panorama-ed/attribute_helpers/branch/master/graph/badge.svg)](https://codecov.io/gh/panorama-ed/attribute_helpers)
+[![Build Status](https://travis-ci.com/panorama-ed/attribute_helpers.svg)](https://travis-ci.com/panorama-ed/attribute_helpers)
+[![Inline docs](http://inch-ci.org/github/panorama-ed/attribute_helpers.png)](http://inch-ci.org/github/panorama-ed/attribute_helpers)
+[![Gem Version](https://badge.fury.io/rb/attribute_helpers.svg)](http://badge.fury.io/rb/attribute_helpers)
 
 # AttributeHelpers
 
