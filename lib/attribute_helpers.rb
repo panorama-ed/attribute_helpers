@@ -33,18 +33,18 @@ module AttributeHelpers
   # super().
   #
   # More information here: http://stackoverflow.com/a/4471202/1103543
-  def transform_attributes(*attrs, &block)
+  def transform_attributes(*attrs)
     transformer = Module.new do
       attrs.each do |attr|
         # Overwrite the accessor.
         define_method(attr) do
           val = super()
-          val && block.call(val)
+          val && yield(val)
         end
 
         # Overwrite the mutator.
         define_method("#{attr}=") do |val|
-          super(val && val.to_s)
+          super(val&.to_s)
         end
       end
     end

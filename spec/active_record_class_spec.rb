@@ -65,8 +65,8 @@ RSpec.context "in an ActiveRecord class" do
 
     context "with attributes that overlap with another class" do
       it "does not overwrite other attributes" do
-        test_obj.other_symbol_attr = 12345
-        expect(test_obj.other_symbol_attr).to eq 12345
+        test_obj.other_symbol_attr = 12_345
+        expect(test_obj.other_symbol_attr).to eq 12_345
       end
     end
   end
@@ -118,8 +118,8 @@ RSpec.context "in an ActiveRecord class" do
 
     context "with attributes that overlap with another class" do
       it "does not overwrite other attributes" do
-        test_obj.other_class_attr = 12345
-        expect(test_obj.other_class_attr).to eq 12345
+        test_obj.other_class_attr = 12_345
+        expect(test_obj.other_class_attr).to eq 12_345
       end
     end
   end

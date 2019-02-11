@@ -1,16 +1,25 @@
 language: ruby
 rvm:
-- 2.0.0
-- 2.1.4
-- 2.2.0
-before_install:
-  - gem update bundler
+- 2.4 # Keep this in sync with .rubocop.yml
+- 2.5
+# The latest version of Ruby is tested below (we use it for our code coverage
+# calculation and RuboCop run).
 script: bundle exec rspec
-addons:
-  code_climate:
-    repo_token: 349fd22a1560a80e4621bc668f8d1ecf5f302ae19ed146c2dbc6b264525ab9c0
+matrix:
+  include:
+  - rvm: 2.6
+    script:
+    - bundle exec rspec
+    - gem install --no-document rubocop rubocop-rspec-focused && rubocop
+    env:
+    - CODE_COVERAGE=true
+branches:
+  only:
+  - master
+  # We always run tests for PRs. This prevents running PR tests twice (once "for
+  # the PR" and once "for the branch"), though we do want tests to run always
+  # run on master.
 notifications:
   email: false
-  hipchat:
-    rooms:
-      secure: LQf6eRVE1yhDHftcmGuKj27vhyg/NQjTWLcEiv76hs0kZ7jnPKbb7TPoyqg08r3/vGyxU1NMhSaeQtuH8cXznXYXaF7WFMWUeulu/OtsVsAo4+s+GhM2n06rXemY7gxhAQ6lxg2I7nodcWrW6hMg+jnvTRPgUmwmv/cHZxg6qTY=
+  slack:
+    secure: Me2JUx/uXZcHPAU2Gsm8j8ygD526JkDZtJ+MToRPdUFhNTU+wuxUkBAmAP5JHabG45wF51P10B/MW1mD+b6ZCQ37r4N8hu7HAxPLhfvUm15g1vIqDFPExqw9jCbFheedQ5oe3BfzX74MA+mxwgSZLYhvio0Tx+S8j/MtR75N6U8=
