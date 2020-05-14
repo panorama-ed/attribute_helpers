@@ -23,6 +23,7 @@ jobs:
         key: bundle-use-ruby-${{ matrix.os }}-${{ matrix.ruby }}-${{ hashFiles('**/Gemfile.lock') }}
         restore-keys: |
           bundle-use-ruby-${{ matrix.os }}-${{ matrix.ruby }}-
+    - run: sudo apt-get install libsqlite3-dev
     - name: bundle install
       run: |
         ruby -v
