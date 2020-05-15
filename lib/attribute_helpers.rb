@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "attribute_helpers/version"
 
 # Provides helper functionality for ruby classes that store various

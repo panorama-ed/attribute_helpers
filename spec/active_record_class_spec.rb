@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 require "spec_helper"
 
-RSpec.context "in an ActiveRecord class" do
+RSpec.context "when in an ActiveRecord class" do
   Temping.create :active_record_test_class do
     with_columns do |t|
       t.integer :other_symbol_attr

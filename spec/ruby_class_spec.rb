@@ -1,26 +1,36 @@
+# frozen_string_literal: true
+
 require "spec_helper"
 
-RSpec.context "in a pure Ruby class" do
-  class RubyTestClass
-    extend AttributeHelpers
+RSpec.context "when in a pure Ruby class" do
+  before :each do
+    stub_const(
+      "RubyTestClass",
+      Class.new do
+        extend AttributeHelpers
 
-    attr_accessor :symbol_attr
-    attr_accessor :class_attr
-    attr_accessor :other_symbol_attr
-    attr_accessor :other_class_attr
+        attr_accessor :symbol_attr
+        attr_accessor :class_attr
+        attr_accessor :other_symbol_attr
+        attr_accessor :other_class_attr
 
-    attr_symbol :symbol_attr
-    attr_class :class_attr
-  end
+        attr_symbol :symbol_attr
+        attr_class :class_attr
+      end
+    )
 
-  class OtherRubyTestClass
-    extend AttributeHelpers
+    stub_const(
+      "OtherRubyTestClass",
+      Class.new do
+        extend AttributeHelpers
 
-    attr_accessor :other_symbol_attr
-    attr_accessor :other_class_attr
+        attr_accessor :other_symbol_attr
+        attr_accessor :other_class_attr
 
-    attr_symbol :other_symbol_attr
-    attr_class :other_class_attr
+        attr_symbol :other_symbol_attr
+        attr_class :other_class_attr
+      end
+    )
   end
 
   let(:test_obj) { RubyTestClass.new }

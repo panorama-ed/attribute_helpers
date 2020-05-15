@@ -1,4 +1,9 @@
+# frozen_string_literal: true
+
 source "https://rubygems.org"
 
-# Specify your gem's dependencies in attribute_helpers.gemspec
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+
 gemspec
+
+gem "panolint", github: "panorama-ed/panolint"
