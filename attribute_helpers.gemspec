@@ -10,9 +10,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Jacob Evelyn"]
   spec.email         = ["jevelyn@panoramaed.com"]
   spec.summary       = "Provides auto-serialization of simple Ruby types that "\
-    "databases do not support."
+                       "databases do not support."
   spec.description   = "Provides auto-serialization of simple Ruby types that "\
-    "databases do not support, such as symbols and classes."
+                       "databases do not support, such as symbols and classes."
   spec.homepage      = "https://github.com/panorama-ed/attribute_helpers"
   spec.license       = "MIT"
 
