@@ -1,5 +1,5 @@
 [![Code Coverage](https://codecov.io/gh/panorama-ed/attribute_helpers/branch/master/graph/badge.svg)](https://codecov.io/gh/panorama-ed/attribute_helpers)
-[![Build Status](https://travis-ci.com/panorama-ed/attribute_helpers.svg)](https://travis-ci.com/panorama-ed/attribute_helpers)
+![Test Status](https://github.com/panorama-ed/attribute_helpers/actions/workflows/tests.yml/badge.svg?branch=main)
 [![Inline docs](http://inch-ci.org/github/panorama-ed/attribute_helpers.png)](http://inch-ci.org/github/panorama-ed/attribute_helpers)
 [![Gem Version](https://badge.fury.io/rb/attribute_helpers.svg)](http://badge.fury.io/rb/attribute_helpers)
 
